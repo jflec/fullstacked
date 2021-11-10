@@ -1,0 +1,85 @@
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+#champ-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  height: 90vh;
+  overflow: hidden;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#back-button {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background-color: rgb(36, 36, 36);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  width: 58px;
+  height: 50px;
+  padding-bottom: 8px;
+  transition: 0.2s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+#back-button:hover {
+  transition: 0.2s;
+  background-color: rgb(51, 51, 51);
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
+}
+
+#champ-info-container {
+  background-color: rgb(36, 36, 36);
+  width: 50%;
+  height: auto;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 30px;
+  border: 2px solid;
+
+  --angle: 135deg;
+
+  border-image: linear-gradient(
+      var(--angle),
+      rgb(36, 36, 36),
+      rgb(255, 197, 5),
+      rgb(36, 36, 36)
+    )
+    1;
+
+  animation: 8s rotate linear infinite;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+#champ-info-container h1 {
+  font-size: 4vw;
+  font-family: 'Major Mono Display', monospace;
+}
+
+#champ-info-container h2 {
+  font-size: 24px;
+}
+
+#champ-info-container p {
+  font-size: 18px;
+  line-height: 20px;
+}

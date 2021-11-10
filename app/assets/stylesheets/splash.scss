@@ -1,0 +1,45 @@
+#splash-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 68px;
+  font-family: 'Quicksand', sans-serif;
+  gap: 20px;
+}
+
+#logo {
+  font-family: 'Major Mono Display', monospace;
+  margin-top: 20px;
+  font-weight: 400;
+}
+
+#splash-container h2 {
+  font-size: 20px;
+}
+
+#search {
+  text-align: center;
+  width: 200px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 200;
+  border-radius: 12px;
+  border: none;
+  background-color: rgb(36, 36, 36);
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+#search:focus {
+  transition: 0.2s;
+  outline: none !important;
+  transform: scale(1.2);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
+  cursor: text;
+}
