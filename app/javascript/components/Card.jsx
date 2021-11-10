@@ -8,12 +8,7 @@ const Card = ({ name, tags, title, id }) => {
       options={{ max: 25, reverse: false, scale: 1.05, speed: 400 }}
       key={id}
     >
-      <Link
-        to={{
-          pathname: `/champions/${name.toLowerCase()}`,
-          state: { champ: `${name}` },
-        }}
-      >
+      <Link to={`/champions/${id}`}>
         <div className="champ-item">
           <div className="top-half">
             <p id="name">{name}</p>

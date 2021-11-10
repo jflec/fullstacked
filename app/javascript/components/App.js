@@ -8,7 +8,7 @@ const App = () => {
     <HashRouter>
       <Switch>
         <Route exact path="/" component={Homepage} />
-        <Route exact path="/champions/:name" component={ChampionPage} />
+        <Route exact path="/champions/:id" component={ChampionPage} />
       </Switch>
     </HashRouter>
   );

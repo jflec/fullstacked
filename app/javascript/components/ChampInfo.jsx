@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const ChampInfo = () => {
   const [champInfo, setChampInfo] = useState(null);
 
-  const url = 'api/v1/champions/index';
+  const url = `api/v1/champions/${60}`;
 
   useEffect(() => {
     fetchData();
@@ -19,29 +19,18 @@ const ChampInfo = () => {
     }
   };
 
+  if (!champInfo) return <div id="champ-page-container">Loading Data...</div>;
+
   return (
     <div id="champ-page-container">
-      {champInfo
-        ?.filter((champ) => {
-          if (champ.name.toLowerCase().includes('akali')) {
-            return champ;
-          }
-        })
-        .map((champ) => {
-          return (
-            <div id="champ-info-container">
-              <h1>{champ.name}</h1>
-              <h2>
-                {champ.title} //{' '}
-                {champ.tags
-                  .slice(1, -1)
-                  .replace(/["']/g, '')
-                  .replace(/[,]/g, '')}
-              </h2>
-              <p>{champ.blurb}</p>
-            </div>
-          );
-        })}
+      <div id="champ-info-container">
+        <h1>{champInfo.name.toLowerCase()}</h1>
+        <h2>
+          {champInfo.title} //{' '}
+          {champInfo.tags.slice(1, -1).replace(/["']/g, '').replace(/[,]/g, '')}
+        </h2>
+        <p>{champInfo.blurb}</p>
+      </div>
     </div>
   );
 };
