@@ -35,7 +35,6 @@ const ChampInfo = () => {
       const response = await fetch(url, obj);
       const obj = {
         method: 'POST',
-        mode: 'no-cors',
         headers: {
           Authorization: `Basic ${key}`,
         },
