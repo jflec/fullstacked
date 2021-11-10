@@ -1,12 +1,11 @@
 class Api::V1::BadgesController < ApplicationController
 
-    require 'rest-client'
+    # require 'rest-client'
 
-    def get_badges
-        url = "https://sandbox-api.youracclaim.com/"
-        response = RestClient.get(url)
-        json = JSON.parse response
-    end
+    # def get_badges
+    #     response = RestClient.get("https://sandbox-api.youracclaim.com/")
+    #     render json: response
+    # end
 
     def index 
         @badges = Badges.all.order(name: :asc)
@@ -18,3 +17,5 @@ class Api::V1::BadgesController < ApplicationController
         render json: @badges
     end
  end
+
+

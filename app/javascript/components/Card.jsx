@@ -1,5 +1,6 @@
 import React from 'react';
 import Tilt from 'react-tilt';
+import ChampionPage from './ChampionPage';
 import { Link } from 'react-router-dom';
 
 const Card = ({ name, tags, title, id }) => {
