@@ -6,9 +6,7 @@ const ChampionPage = () => {
   return (
     <div id="champion-page-container">
       <Link to="/">
-        <div id="back-button">
-          <i className="fas fa-arrow-left"></i>
-        </div>
+        <div id="back-button">👈</div>
       </Link>
       <ChampInfo />
     </div>
